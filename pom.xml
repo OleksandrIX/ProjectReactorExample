@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <url>https://maven.apache.org</url>
+
+    <groupId>oleksandrix.example</groupId>
+    <artifactId>Reactor</artifactId>
+    <version>1.0</version>
+
+    <name>Reactor</name>
+    <description>This is example project Reactor</description>
+
+    <properties>
+        <lombok.version>1.18.30</lombok.version>
+        <projectreactor-bom.version>2023.0.0</projectreactor-bom.version>
+        <projectreactor.version>3.6.0</projectreactor.version>
+    </properties>
+
+    <dependencies>
+        <!--    Project reactor    -->
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>${projectreactor.version}</version>
+        </dependency>
+        <!--    Tools    -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-bom</artifactId>
+                <version>${projectreactor-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
